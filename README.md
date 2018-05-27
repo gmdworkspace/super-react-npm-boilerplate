@@ -1,6 +1,8 @@
 # super-react-npm-boilerplate
 
 [![Build Status](https://travis-ci.org/gmdworkspace/super-react-npm-boilerplate.svg?branch=master)](https://travis-ci.org/gmdworkspace/super-react-npm-boilerplate)
+[![npm version](https://badge.fury.io/js/super-react-npm-boilerplate.svg)](https://badge.fury.io/js/super-react-npm-boilerplate)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 **super-react-npm-boilerplate gives you an express way to start building your React packages and publishing it to the registry.**
 
