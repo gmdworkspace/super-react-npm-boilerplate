@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {renderIf} from '../../utils/render';
+import './HelloWorld.style';
 
 const HelloWorld = ({title, description, showDescription}) => {
   return (
