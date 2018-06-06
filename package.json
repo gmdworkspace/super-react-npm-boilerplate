@@ -6,8 +6,8 @@
   "scripts": {
     "lint": "eslint './{src,test}/**/*.{js,jsx}'",
     "lint:fix": "eslint --fix './{src,test}/**/*.{js,jsx}'",
-    "test:unit": "NODE_ENV=test nyc mocha --compilers js:babel-core/register --require babel-polyfill --require test/enzymeSetup.js --require test/jsdomSetup.js './test/**/*.spec.{js,jsx}'",
-    "test:report": "NODE_ENV=test nyc report --reporter=lcov mocha --compilers js:babel-core/register --require babel-polyfill --require test/enzymeSetup.js --require test/jsdomSetup.js './test/**/*.spec.{js,jsx}'",
+    "test:unit": "NODE_ENV=test nyc mocha --compilers js:babel-core/register --require babel-polyfill --require test/enzymeSetup.js --require test/jsdomSetup.js --require ignore-styles './test/**/*.spec.{js,jsx}'",
+    "test:report": "NODE_ENV=test nyc report --reporter=lcov mocha --compilers js:babel-core/register --require babel-polyfill --require test/enzymeSetup.js --require test/jsdomSetup.js --require ignore-styles './test/**/*.spec.{js,jsx}'",
     "test": "npm-run-all lint test:unit build",
     "build": "webpack --config webpack.dev.js",
     "build:production": "webpack -p --config webpack.prod.js",
@@ -43,6 +43,7 @@
     "eslint": "^4.19.1",
     "eslint-plugin-json": "^1.2.0",
     "eslint-plugin-react": "^7.8.1",
+    "ignore-styles": "^5.0.1",
     "jsdom": "^11.10.0",
     "mocha": "^5.1.1",
     "node-sass": "^4.9.0",
