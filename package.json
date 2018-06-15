@@ -11,7 +11,9 @@
     "test": "npm-run-all lint test:unit build",
     "build": "webpack --config webpack.dev.js",
     "build:production": "webpack -p --config webpack.prod.js",
-    "start:dev": "NODE_ENV=dev webpack-dev-server --config webpack.dev.js --watch --color"
+    "start:dev": "NODE_ENV=dev webpack-dev-server --config webpack.dev.js --watch --color",
+    "component:create": "./generator/component/create.sh",
+    "component:delete": "./generator/component/delete.sh"
   },
   "repository": {
     "type": "git",
