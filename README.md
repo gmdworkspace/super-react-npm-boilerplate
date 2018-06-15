@@ -14,6 +14,7 @@
 * Code coverage - nyc
 * Dev server for local development (webpack-dev-server)
 * Production/Publish ready
+* Generator support to create new components
 
 # Usage
 Clone this repository 
@@ -50,3 +51,17 @@ npm run build:production
 ```
 
 This will minify JS make and make your component production ready.
+
+# Generators
+
+```
+npm run component:create HelloWorld
+```
+
+This creates new react component and respective tests for the component.
+
+To delete a component which was wrongly created use
+
+```
+npm run component:delete HelloWorld
+``` 
