@@ -13,7 +13,8 @@
     "build:production": "webpack -p --config webpack.prod.js",
     "start:dev": "NODE_ENV=dev webpack-dev-server --config webpack.dev.js --watch --color",
     "component:create": "./generator/component/create.sh",
-    "component:delete": "./generator/component/delete.sh"
+    "component:delete": "./generator/component/delete.sh",
+    "setup": "chmod +x generator/setup/setup.sh && ./generator/setup/setup.sh"
   },
   "repository": {
     "type": "git",
@@ -47,6 +48,7 @@
     "eslint-plugin-react": "^7.8.1",
     "ignore-styles": "^5.0.1",
     "jsdom": "^11.10.0",
+    "json": "^9.0.6",
     "mini-css-extract-plugin": "^0.4.0",
     "mocha": "^5.1.1",
     "node-sass": "^4.9.0",

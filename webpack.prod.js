@@ -2,6 +2,7 @@ const path = require('path');
 const merge = require('webpack-merge');
 const common = require('./webpack.config.js');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const packageJson = require('./package.json');
 
 module.exports = merge(common, {
   entry: [path.join(__dirname, 'src', 'index.js')],
@@ -9,7 +10,7 @@ module.exports = merge(common, {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'build') ,
-    library: 'super-react-infinite-scroll',
+    library: packageJson.name,
     libraryTarget: 'umd'
   },
   module: {

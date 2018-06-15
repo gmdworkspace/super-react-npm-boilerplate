@@ -1,6 +1,7 @@
 const path = require('path');
 const merge = require('webpack-merge');
 const common = require('./webpack.config.js');
+const packageJson = require('./package.json');
 
 module.exports = merge(common, {
   mode: 'development',
@@ -8,7 +9,7 @@ module.exports = merge(common, {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dev', 'build') ,
-    library: 'super-react-npm-boilerplate',
+    library: packageJson.name,
     libraryTarget: 'umd'
   },
   devServer: {
