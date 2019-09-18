@@ -1,13 +1,15 @@
 {
   plugins: [
-    'react',
-    'json'
+    "react",
+    "json",
+    "jest"
+
   ],
   extends: ['eslint:recommended', 'plugin:react/recommended'],
   env: {
     browser: true,
     node: true,
-    mocha: true
+    "jest/globals": true
   },
   parserOptions: {
     ecmaVersion: 6,
@@ -24,6 +26,11 @@
     eqeqeq: 'error',
     func-style: 'error',
     indent: ['error', 2],
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error",
     no-eval: 'error',
     no-trailing-spaces: 'error',
     no-unused-vars: ['error', { 'vars': 'all', 'args': 'none', 'ignoreRestSiblings': true }],

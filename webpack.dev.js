@@ -5,7 +5,7 @@ const packageJson = require('./package.json');
 
 module.exports = merge(common, {
   mode: 'development',
-  entry: ['babel-polyfill', path.join(__dirname, 'dev', 'index.js')],
+  entry: ['@babel/polyfill', path.join(__dirname, 'dev', 'index.js')],
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dev', 'build') ,
@@ -15,7 +15,7 @@ module.exports = merge(common, {
   devServer: {
     contentBase: path.join(__dirname, 'dev'),
     compress: true,
-    port: 9000
+    port: 9001
   },
   devtool: 'inline-source-map',
   module: {
@@ -25,9 +25,9 @@ module.exports = merge(common, {
     }, {
       test: /\.scss$/,
       use: [
-        "style-loader",
-        "css-loader",
-        "sass-loader"
+        'style-loader',
+        'css-loader',
+        'sass-loader'
       ]
     }]
   }
